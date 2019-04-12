@@ -1,53 +1,53 @@
 // Translate text to Scrabble emojis
-function scrabbler() {
+function slackabble() {
 	// Save input string, make string all lowercase and split into an array of chars
 	var str = document.getElementById('input').value.toLowerCase();
 	var chars = str.split('');
-	var output = '';
 
 	// Check if string only consists of letters and whitespace
 	// Alert and refresh page if other characters are found
 	if (!/^[a-zA-Z\s]*$/.test(str)) {
 		alert('Please only enter letters and spaces.');
 		location.reload();
+	} else {
+		getOutput(str, chars);
 	}
+}
 
+function getOutput(str, chars) {
+	var output = '';
 	// Translate chars into Scrabble emoji text
 	for (var i = 0; i < chars.length; i++) {
-		output += `:scrabble-${chars[i]}:`;
+		if (chars[i] == ' ') {
+			output += ':scrabble-blank:';
+		} else {
+			output += `:scrabble-${chars[i]}:`;
+		}
 	}
+
 	// Display output to HTML
+	document.getElementById('og-text').innerHTML = '"' + str.toUpperCase() + '"';
 	document.getElementById('output').innerHTML = output;
 
 	// Clear textbox
 	document.getElementById('input').value = '';
-
-	var button = document.createElement('button');
-	button.innerHTML = 'Copy to clipboard';
-	// where do we want to have the button to appear?
-	// you can append it to another element just by doing something like
-	// document.getElementById('foobutton').appendChild(button);
-	document.body.appendChild(button);
-
-	button.onclick = function() {
-		copy(output);
-		document.body.removeChild(button);
-	};
 }
 
-function copy(output) {
+// NOT WORKING
+function copy() {
 	// Copy text to clipboard
 	// https://stackoverflow.com/a/46118025
+	var text = document.getElementById('output').value;
+	console.log(text);
 	var temp = document.createElement('input');
 	document.body.appendChild(temp);
-	temp.setAttribute('value', output);
+	temp.setAttribute('value', text);
 	temp.select();
 	document.execCommand('copy');
 	document.body.removeChild(temp);
 
 	/* Alert the copied text */
-	alert('Copied to clipboard!');
-	// document.getElementById('button').body.removeChild(button);
+	alert('Copied to clipboard!' + text);
 }
 // Press enter to click button
 // https://stackoverflow.com/a/155263
