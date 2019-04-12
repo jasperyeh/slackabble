@@ -39,8 +39,6 @@ function getOutput(str, chars) {
 function copy() {
 	// Copy text to clipboard
 	// https://stackoverflow.com/a/46118025
-	// var text = document.getElementById('output').value;
-	console.log(output);
 	var temp = document.createElement('input');
 	document.body.appendChild(temp);
 	temp.setAttribute('value', output);
