@@ -1,3 +1,6 @@
+// global variable :(
+var output = '';
+
 // Translate text to Scrabble emojis
 function slackabble() {
 	// Save input string, make string all lowercase and split into an array of chars
@@ -15,7 +18,6 @@ function slackabble() {
 }
 
 function getOutput(str, chars) {
-	var output = '';
 	// Translate chars into Scrabble emoji text
 	for (var i = 0; i < chars.length; i++) {
 		if (chars[i] == ' ') {
@@ -37,17 +39,17 @@ function getOutput(str, chars) {
 function copy() {
 	// Copy text to clipboard
 	// https://stackoverflow.com/a/46118025
-	var text = document.getElementById('output').value;
-	console.log(text);
+	// var text = document.getElementById('output').value;
+	console.log(output);
 	var temp = document.createElement('input');
 	document.body.appendChild(temp);
-	temp.setAttribute('value', text);
+	temp.setAttribute('value', output);
 	temp.select();
 	document.execCommand('copy');
 	document.body.removeChild(temp);
 
 	/* Alert the copied text */
-	alert('Copied to clipboard!' + text);
+	alert('Copied to clipboard!');
 }
 // Press enter to click button
 // https://stackoverflow.com/a/155263
