@@ -1,9 +1,7 @@
+// global variables :(
 var output = '';
 var outputCopy = '';
 
-/* 
-when button is pressed, save output into a sep
-*/
 // Translate text to Scrabble emojis
 function slackabble() {
 	// Save input string, make string all lowercase and split into an array of chars

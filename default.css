@@ -1,8 +1,3 @@
-sub {
-	margin: 5px;
-	font-size: 15px;
-}
-
 .center {
 	color: #3f2a14;
 	height: 100vh;
@@ -10,31 +5,6 @@ sub {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
-
-.textbox {
-}
-
-#og-text {
-	padding: 5px;
-	margin-bottom: 5px;
-	max-width: 385px;
-	max-height: 100px;
-	overflow-wrap: break-word;
-	overflow: auto;
-	text-align: center;
-}
-#output {
-	/* border-radius: 5px;
-	border-width: 5px;
-	border-color: #3f2a14; */
-	padding: 5px;
-	/* background-color: #ece5cf; */
-	max-height: 100px;
-	overflow: auto;
-	margin-top: 0%;
-	text-align: center;
-	max-width: 385px;
 }
 
 .button {
@@ -104,6 +74,25 @@ sub {
 	text-shadow: 0px 1px 0px #ffffff;
 }
 
+#output {
+	padding: 5px;
+	max-height: 100px;
+	overflow: auto;
+	margin-top: 0%;
+	text-align: center;
+	max-width: 385px;
+}
+
+#og-text {
+	padding: 5px;
+	margin-bottom: 5px;
+	max-width: 385px;
+	max-height: 100px;
+	text-align: center;
+	overflow-wrap: break-word;
+	overflow: auto;
+}
+
 body {
 	font-family: 'Merriweather', serif;
 	background: -moz-linear-gradient(270deg, #deb887 0%, #fff4e8 100%); /* ff3.6+ */
@@ -123,4 +112,9 @@ body {
 			endColorstr='#FFF4E8',
 			GradientType=0
 		); /* ie6-9 */
+}
+
+sub {
+	margin: 5px;
+	font-size: 15px;
 }
