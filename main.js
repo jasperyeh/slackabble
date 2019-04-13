@@ -31,6 +31,7 @@ function getOutput(str, chars) {
 	// Display output to HTML
 	document.getElementById('og-text').innerHTML = '"' + str.toUpperCase() + '"';
 	document.getElementById('output').innerHTML = output;
+	// document.getElementById('copy').innerHTML = 'Copy to clipboard';
 
 	// Clear textbox and reset output
 	document.getElementById('input').value = '';
@@ -47,8 +48,7 @@ function copy() {
 	temp.select();
 	document.execCommand('copy');
 	document.body.removeChild(temp);
-	// Alert the copied text
-	alert('Copied to clipboard!');
+	// document.getElementById('copy').innerHTML = 'Copied to clipboard!';
 	outputCopy = '';
 }
 // Press enter to click button
