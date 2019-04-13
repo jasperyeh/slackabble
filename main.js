@@ -1,6 +1,9 @@
-// won't work like this, output needs to reset after every translation.
 var output = '';
+var outputCopy = '';
 
+/* 
+when button is pressed, save output into a sep
+*/
 // Translate text to Scrabble emojis
 function slackabble() {
 	// Save input string, make string all lowercase and split into an array of chars
@@ -31,8 +34,10 @@ function getOutput(str, chars) {
 	document.getElementById('og-text').innerHTML = '"' + str.toUpperCase() + '"';
 	document.getElementById('output').innerHTML = output;
 
-	// Clear textbox
+	// Clear textbox and reset output
 	document.getElementById('input').value = '';
+	outputCopy = output;
+	output = '';
 }
 
 function copy() {
@@ -40,13 +45,13 @@ function copy() {
 	// https://stackoverflow.com/a/46118025
 	var temp = document.createElement('input');
 	document.body.appendChild(temp);
-	temp.setAttribute('value', output);
+	temp.setAttribute('value', outputCopy);
 	temp.select();
 	document.execCommand('copy');
 	document.body.removeChild(temp);
-
-	/* Alert the copied text */
+	// Alert the copied text
 	alert('Copied to clipboard!');
+	outputCopy = '';
 }
 // Press enter to click button
 // https://stackoverflow.com/a/155263

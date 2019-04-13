@@ -1,8 +1,3 @@
-body {
-	background-color: burlywood;
-	font-family: 'Merriweather', serif;
-}
-
 sub {
 	margin: 5px;
 	font-size: 15px;
@@ -28,4 +23,92 @@ sub {
 	text-align: center;
 	max-width: 385px;
 	/* max-height: 50%; */
+}
+
+.button {
+	-moz-box-shadow: inset 0px 1px 0px 0px #a6827e;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #a6827e;
+	box-shadow: inset 0px 1px 0px 0px #a6827e;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bd9771), color-stop(1, #997b5a));
+	background: -moz-linear-gradient(top, #bd9771 5%, #997b5a 100%);
+	background: -webkit-linear-gradient(top, #bd9771 5%, #997b5a 100%);
+	background: -o-linear-gradient(top, #bd9771 5%, #997b5a 100%);
+	background: -ms-linear-gradient(top, #bd9771 5%, #997b5a 100%);
+	background: linear-gradient(to bottom, #bd9771 5%, #997b5a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bd9771', endColorstr='#997b5a', GradientType=0);
+	background-color: #bd9771;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #54381e;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 13px;
+	padding: 6px 24px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #4d3534;
+}
+.myButton:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #997b5a), color-stop(1, #bd9771));
+	background: -moz-linear-gradient(top, #997b5a 5%, #bd9771 100%);
+	background: -webkit-linear-gradient(top, #997b5a 5%, #bd9771 100%);
+	background: -o-linear-gradient(top, #997b5a 5%, #bd9771 100%);
+	background: -ms-linear-gradient(top, #997b5a 5%, #bd9771 100%);
+	background: linear-gradient(to bottom, #997b5a 5%, #bd9771 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#997b5a', endColorstr='#bd9771', GradientType=0);
+	background-color: #997b5a;
+}
+.myButton:active {
+	position: relative;
+	top: 1px;
+}
+
+#input {
+	-moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	box-shadow: inset 0px 1px 0px 0px #ffffff;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
+	background: -moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background: -webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background: -o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background: -ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9', GradientType=0);
+	background-color: #f9f9f9;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #54381e;
+	display: inline-block;
+	cursor: pointer;
+	color: #666666;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: normal;
+	padding: 4px 6px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #ffffff;
+}
+
+body {
+	font-family: 'Merriweather', serif;
+	background: -moz-linear-gradient(270deg, #ffe3b3 0%, #deb887 100%); /* ff3.6+ */
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0%, #ffe3b3),
+		color-stop(100%, #deb887)
+	); /* safari4+,chrome */
+	background: -webkit-linear-gradient(270deg, #ffe3b3 0%, #deb887 100%); /* safari5.1+,chrome10+ */
+	background: -o-linear-gradient(270deg, #ffe3b3 0%, #deb887 100%); /* opera 11.10+ */
+	background: -ms-linear-gradient(270deg, #ffe3b3 0%, #deb887 100%); /* ie10+ */
+	background: linear-gradient(180deg, #ffe3b3 0%, #deb887 100%); /* w3c */
+	filter: progid:DXImageTransform.Microsoft.gradient(
+			startColorstr='#FFE3B3',
+			endColorstr='#deb887',
+			GradientType=0
+		); /* ie6-9 */
 }
