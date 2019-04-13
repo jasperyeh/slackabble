@@ -9,6 +9,7 @@ sub {
 }
 
 .center {
+	color: #3f2a14;
 	height: 80vh;
 	display: flex;
 	flex-direction: column;

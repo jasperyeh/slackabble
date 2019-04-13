@@ -1,4 +1,4 @@
-// global variable :(
+// won't work like this, output needs to reset after every translation.
 var output = '';
 
 // Translate text to Scrabble emojis
@@ -35,7 +35,6 @@ function getOutput(str, chars) {
 	document.getElementById('input').value = '';
 }
 
-// NOT WORKING
 function copy() {
 	// Copy text to clipboard
 	// https://stackoverflow.com/a/46118025
