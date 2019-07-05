@@ -22,9 +22,9 @@ function getOutput(str, chars) {
 	// Translate chars into Scrabble emoji text
 	for (var i = 0; i < chars.length; i++) {
 		if (chars[i] == ' ') {
-			output += ':stonks-guy:';
+			output += ':scrabble-blank:';
 		} else {
-			output += ':stonks-guy:';
+			output += `:scrabble-${chars[i]}:`;
 		}
 	}
 
